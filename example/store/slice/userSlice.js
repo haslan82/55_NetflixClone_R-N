@@ -2,8 +2,30 @@ import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
   users: [
-    {
+    /* {
       id: 1,
+      name: 'John Doe',
+      surname:'black',
+      age:'22',
+      address:'1234st.',
+      email:'john@example',
+      phone:'123',
+      profileImage:'http',
+      gender:'male',
+    },
+    {
+      id: 3,
+      name: 'Kent ',
+      surname:'Clark',
+      age:'22',
+      address:'1234st.',
+      email:'clark@example',
+      phone:'123',
+      profileImage:'http',
+      gender:'male',
+    },
+    {
+      id: 4,
       name: 'John Doe',
       surname:'black',
       age:'22',
@@ -23,7 +45,29 @@ const initialState = {
       phone:'123',
       profileImage:'http',
       gender:'male',
-    }
+    },
+    {
+      id: 5,
+      name: 'John Doe',
+      surname:'black',
+      age:'22',
+      address:'1234st.',
+      email:'john@example',
+      phone:'123',
+      profileImage:'http',
+      gender:'male',
+    },
+    {
+      id: 6,
+      name: 'Kent ',
+      surname:'Clark',
+      age:'22',
+      address:'1234st.',
+      email:'clark@example',
+      phone:'123',
+      profileImage:'http',
+      gender:'male',
+    } */
   ],
  
 };

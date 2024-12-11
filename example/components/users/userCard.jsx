@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, Pressable} from 'react-native';
-import {compareName, getInitialNameSurname} from '../../utils/functions';
+import {compareName, getInitialNameSurname, getRandomColor} from '../../utils/functions';
 import { ThemeColors } from '../../theme/colors';
 import { ArrowRight } from 'iconsax-react-native';
 
@@ -16,7 +16,7 @@ const UserCard = ({user}) => {
             borderWidth: 1,
             justifyContent: 'center',
             alignItems:'center',
-            backgroundColor:"pink"
+            backgroundColor:getRandomColor(),
             
           }}>
           <Text style={{fontWeight:'bold', fontSize:20 }}>{getInitialNameSurname(user.name, user.surname)} </Text>
