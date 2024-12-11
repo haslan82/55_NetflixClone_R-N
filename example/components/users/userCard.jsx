@@ -1,12 +1,12 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Pressable} from 'react-native';
 import {compareName, getInitialNameSurname} from '../../utils/functions';
 import { ThemeColors } from '../../theme/colors';
 import { ArrowRight } from 'iconsax-react-native';
 
 const UserCard = ({user}) => {
   return (
-    <View style={styles.container}>
+    <Pressable style={styles.container}>
       <View>
         <View
           style={{
@@ -30,7 +30,7 @@ const UserCard = ({user}) => {
       <View style={{justifyContent:"center", alignItems:"center"}}>
         <ArrowRight color={ThemeColors.gray}  size={25}/>
       </View>
-    </View>
+    </Pressable>
   );
 };
 
