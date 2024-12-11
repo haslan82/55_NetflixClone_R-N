@@ -9,9 +9,7 @@ const getInitialNameSurname = (name, surname) => {
 };
 
 const getRandomColor = color => {
-  const randomColor = `#${Math.floor(Math.random() * 2556758)
-    .toString()
-    .padStart(6, '0')}`;
+  const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
 
   return randomColor;
 };

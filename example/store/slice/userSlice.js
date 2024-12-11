@@ -2,7 +2,7 @@ import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
   users: [
-    /* {
+    {
       id: 1,
       name: 'John Doe',
       surname:'black',
@@ -67,7 +67,7 @@ const initialState = {
       phone:'123',
       profileImage:'http',
       gender:'male',
-    } */
+    }
   ],
  
 };
