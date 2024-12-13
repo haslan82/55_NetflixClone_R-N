@@ -3,10 +3,15 @@ import {View, Text, StyleSheet, Pressable} from 'react-native';
 import {compareName, getInitialNameSurname, getRandomColor} from '../../utils/functions';
 import { ThemeColors } from '../../theme/colors';
 import { ArrowRight } from 'iconsax-react-native';
+import { useNavigation } from '@react-navigation/native';
+import { USERDETAIL } from '../../utils/route';
 
 const UserCard = ({user}) => {
+  const navigation = useNavigation();
   return (
-    <Pressable style={styles.container}>
+    <Pressable 
+    onPress={()=>navigation.navigate(USERDETAIL,{user:user})}
+    style={styles.container}>
       <View>
         <View
           style={{

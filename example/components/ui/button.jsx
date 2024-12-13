@@ -11,6 +11,8 @@ const Button = props => {
         return ThemeColors.green;
       case 'warning':
         return ThemeColors.yellow;
+      case 'info':
+        return ThemeColors.lightPink;
 
       default:
         return ThemeColors.blue;

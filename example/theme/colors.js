@@ -8,7 +8,8 @@ const ThemeColors = {
     black: '#181818',
     gray: '#DDDDDD',
     input:'#F2F2F2',
-    gray:'#ccc'
+    gray:'#ccc',
+    red:'red'
   };
   
   export { ThemeColors };

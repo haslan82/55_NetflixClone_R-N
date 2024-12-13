@@ -1,74 +1,11 @@
 import {createSlice} from '@reduxjs/toolkit';
+import { Alert } from 'react-native';
+import { getUsers } from '../actions/userActions';
 
 const initialState = {
-  users: [
-    {
-      id: 1,
-      name: 'John Doe',
-      surname:'black',
-      age:'22',
-      address:'1234st.',
-      email:'john@example',
-      phone:'123',
-      profileImage:'http',
-      gender:'male',
-    },
-    {
-      id: 3,
-      name: 'Kent ',
-      surname:'Clark',
-      age:'22',
-      address:'1234st.',
-      email:'clark@example',
-      phone:'123',
-      profileImage:'http',
-      gender:'male',
-    },
-    {
-      id: 4,
-      name: 'John Doe',
-      surname:'black',
-      age:'22',
-      address:'1234st.',
-      email:'john@example',
-      phone:'123',
-      profileImage:'http',
-      gender:'male',
-    },
-    {
-      id: 2,
-      name: 'Kent ',
-      surname:'Clark',
-      age:'22',
-      address:'1234st.',
-      email:'clark@example',
-      phone:'123',
-      profileImage:'http',
-      gender:'male',
-    },
-    {
-      id: 5,
-      name: 'John Doe',
-      surname:'black',
-      age:'22',
-      address:'1234st.',
-      email:'john@example',
-      phone:'123',
-      profileImage:'http',
-      gender:'male',
-    },
-    {
-      id: 6,
-      name: 'Kent ',
-      surname:'Clark',
-      age:'22',
-      address:'1234st.',
-      email:'clark@example',
-      phone:'123',
-      profileImage:'http',
-      gender:'male',
-    }
-  ],
+  users: [],
+  pending:false,
+  error:""
  
 };
 
@@ -76,10 +13,29 @@ const userSlice = createSlice({
   name: 'Users',
   initialState,
   reducers: {
-    addNewUser: state => {
+    addNewUser:( state,action) => {
       state.users = [...state.users, action.payload];
+      Alert.alert("Kullanıcı başarılı bir şekilde eklendi")
     },
+    
+
   },
+
+extraReducers:builder=>{
+  builder
+  .addCase(getUsers.pending,state=>{
+    state.pending=true
+  })
+  .addCase(getUsers.fulfilled,(state,action)=>{
+    state.users=action.payload
+    state.pending=false
+  })
+  .addCase(getUsers.rejected,(state,action)=>{
+    state.error=action.error
+    state.pending=false
+  })
+}
+
 });
 
 export const {addNewUser} = userSlice.actions;
