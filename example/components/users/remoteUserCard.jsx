@@ -32,12 +32,13 @@ const RemoteUserCard = ({user}) => {
         ) : (
           <View
             style={{
-              width: 80,
-              height: 80,
+              width: 70,
+              height: 70,
               borderRadius: 100,
               borderWidth: 1,
               justifyContent: 'center',
               alignItems: 'center',
+              resizeMode: 'contain',
               backgroundColor: getRandomColor(),
             }}>
             <Text style={{fontWeight: 'bold', fontSize: 20}}>
