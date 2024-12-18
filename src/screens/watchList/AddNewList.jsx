@@ -1,4 +1,4 @@
-import {ScrollView, StyleSheet, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {Formik} from 'formik';
 import {useDispatch} from 'react-redux';
 import {useNavigation} from '@react-navigation/native';
@@ -8,7 +8,7 @@ import Button from '../../components/Button';
 import {newListSchema} from '../../utils/validationSchema';
 import {addNewList} from '../../store/slice/watchListSlice';
 import {WATCHLIST} from '../../utils/routes';
-import {Text} from 'react-native-svg';
+
 import {ThemeColors} from '../../theme/ThemeColors';
 
 const AddNewList = () => {
@@ -33,7 +33,7 @@ const AddNewList = () => {
         {({handleChange, handleBlur, handleSubmit, values, errors}) => (
           <ScrollView>
             <View style={{backgroundColor:"red",marginBottom: 56}}> 
-                // ! margin etki ederken background neden etki etmiyor????
+              {/*   // ! margin etki ederken background neden etki etmiyor???? */}
               <Text
                 style={{
                   color: 'white',

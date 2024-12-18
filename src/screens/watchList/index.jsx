@@ -1,10 +1,9 @@
-import { View, StyleSheet, FlatList } from 'react-native';
+import { View, StyleSheet, FlatList, Text } from 'react-native';
 import { DefaultScreenStyle } from '../../styles/DefaultScreenStyle';
 import { useSelector } from 'react-redux';
 import WatchListItem from '../../components/watchList/WatchListItem';
-import { Text } from 'react-native-svg';
-import { ThemeColors } from '../../theme/ThemeColors';
-import { height } from '../../utils/Constant';
+
+
 
 const WatchList = () => {
     const {watchList} =  useSelector(state=> state.watchList)
@@ -14,9 +13,17 @@ const WatchList = () => {
          <View style={DefaultScreenStyle.container}>
 
           <FlatList 
-           ListHeaderComponent={
-            <Text style={{color:"red"}}>ththtjhpoj</Text>
-           }
+          ListHeaderComponent={<Text
+            style={{
+              color: 'white',
+              fontSize: 24,
+              textAlign: 'center',
+              fontSize: 44,
+              marginVertical: 10,
+            }}>
+            Who's Watching?
+          </Text>}
+          //! bu text niye gelmedi???
            numColumns={2}
            data={watchList} 
            renderItem={({item})=><WatchListItem item={item} />}
