@@ -1,21 +1,18 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
+import { DefaultScreenStyle } from '../../styles/DefaultScreenStyle';
 
 const WatchList = () => {
     return (
-        <View style={styles.container}>
+      
+         <View style={DefaultScreenStyle.container}>
             <Text>WatchList</Text>
         </View>
+    
     );
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#f5f5f5'
-    }
+
 });
 
 export default WatchList;

@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+/* import {StyleSheet} from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {ADDNEWUSER, REMOTEUSERS, USERDETAIL, USERS} from '../utils/route';
 import Users from '../screens/users';
@@ -21,4 +21,4 @@ const RootNavigation = () => {
 
 export default RootNavigation;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({}); */
