@@ -3,7 +3,7 @@ import {View, StyleSheet, Image, Text} from 'react-native';
 import {ThemeColors} from '../../theme/ThemeColors';
 import Button from '../../components/Button';
 import {WATCHLIST} from '../../utils/routes';
-import { useNavigation } from '@react-navigation/native';
+
 
 // create a component
 const GetStarted = ({navigation}) => {

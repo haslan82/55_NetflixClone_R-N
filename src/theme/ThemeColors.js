@@ -6,9 +6,9 @@ const ThemeColors = {
     green: '#5DD669',
     white: '#FFFFFF',
     black: '#181818',
-    gray: '#DDDDDD',
+    gray: '#656060',
     input:'#F2F2F2',
-    gray:'#ccc',
+   
     red:'#C6090B'
   };
   

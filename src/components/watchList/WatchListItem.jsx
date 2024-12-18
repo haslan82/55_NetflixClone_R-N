@@ -1,0 +1,50 @@
+import {Smileys} from 'iconsax-react-native';
+import React from 'react';
+import {View, Text, StyleSheet, Pressable} from 'react-native';
+import {ThemeColors} from '../../theme/ThemeColors';
+import { getRandomColor } from '../../utils/Function';
+import { height, width } from '../../utils/Constant';
+import { useNavigation } from '@react-navigation/native';
+import { ADDNEWLIST } from '../../utils/routes';
+
+const WatchListItem = ({item, index}) => {
+  // console.log(item.id)
+  const navigation = useNavigation();
+  return (
+    <Pressable
+    onPress={()=> navigation.navigate(ADDNEWLIST)}
+    style={styles.container}>
+      <View
+        style={{
+          width:width*0.4 ,
+          height: width*0.4,
+          backgroundColor: getRandomColor(),
+          justifyContent: 'center',
+          alignItems: 'center',
+          borderRadius:3
+        }}>
+        <Smileys size="100" color={ThemeColors.white} />
+      </View>
+      <Text style={styles.title}>{item.title}</Text>
+    </Pressable>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    width: '45%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 10,
+    margin: 10,
+  
+  },
+  title: {
+    color: ThemeColors.white,
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginTop: 10,
+  },
+});
+
+export default WatchListItem;
