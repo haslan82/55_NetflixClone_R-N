@@ -1,13 +1,16 @@
 import {Button, StyleSheet} from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import GetStarted from '../screens/getStarted';
-import {ADDNEWLIST, GETSTARTED, SIGNIN, WATCHLIST} from '../utils/routes';
+import {ADDNEWLIST, GETSTARTED, SIGNIN, TAB, WATCHLIST} from '../utils/routes';
 import SıgnIn from '../screens/signIn/SignIn';
 import WatchList from '../screens/watchList';
 import {ThemeColors} from '../theme/ThemeColors';
 import {Edit2} from 'iconsax-react-native';
 import AddNewList from '../screens/watchList/AddNewList';
 import { useNavigation } from '@react-navigation/native';
+import TabNavigator from './TabNavigation';
+
+
 
 const Stack = createNativeStackNavigator();
 
@@ -39,6 +42,9 @@ const RootNavigation = () => {
         }}
       />
       <Stack.Screen name={ADDNEWLIST} component={AddNewList} />
+      <Stack.Screen options={{
+        headerShown: false,
+      }} name={TAB} component={TabNavigator} />
     </Stack.Navigator>
   );
 };

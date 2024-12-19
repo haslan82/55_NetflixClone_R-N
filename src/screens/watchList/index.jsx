@@ -2,6 +2,7 @@ import { View, StyleSheet, FlatList, Text } from 'react-native';
 import { DefaultScreenStyle } from '../../styles/DefaultScreenStyle';
 import { useSelector } from 'react-redux';
 import WatchListItem from '../../components/watchList/WatchListItem';
+import { height } from '../../utils/Constant';
 
 
 
@@ -18,8 +19,7 @@ const WatchList = () => {
               color: 'white',
               fontSize: 24,
               textAlign: 'center',
-              fontSize: 44,
-              marginVertical: 10,
+              marginVertical: height*0.05,
             }}>
             Who's Watching?
           </Text>}

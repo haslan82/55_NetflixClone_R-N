@@ -3,16 +3,16 @@ import React from 'react';
 import {View, Text, StyleSheet, Pressable, Image} from 'react-native';
 import {ThemeColors} from '../../theme/ThemeColors';
 import {getRandomColor} from '../../utils/Function';
-import {height, width} from '../../utils/Constant';
+import {width} from '../../utils/Constant';
 import {useNavigation} from '@react-navigation/native';
-import {ADDNEWLIST} from '../../utils/routes';
+import {TAB} from '../../utils/routes';
 
 const WatchListItem = ({item, index}) => {
   // console.log(item.id)
   const navigation = useNavigation();
   return (
     <Pressable
-      onPress={() => navigation.navigate(ADDNEWLIST)}
+      onPress={() => navigation.replace(TAB)}
       style={styles.container}>
       <View
         style={{

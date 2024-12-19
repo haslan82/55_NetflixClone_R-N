@@ -32,7 +32,7 @@ const AddNewList = () => {
         }}>
         {({handleChange, handleBlur, handleSubmit, values, errors}) => (
           <ScrollView>
-            <View style={{backgroundColor:"red",marginBottom: 56}}> 
+            <View style={{marginBottom: 56}}> 
               {/*   // ! margin etki ederken background neden etki etmiyor???? */}
               <Text
                 style={{
