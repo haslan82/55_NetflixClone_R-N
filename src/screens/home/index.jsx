@@ -1,11 +1,25 @@
-import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import defaultScreenStyle from '../../../example/styles/defaultScreenStyle';
+import {useEffect} from 'react';
+import {Text, StyleSheet, FlatList, View} from 'react-native';
+import {useDispatch, useSelector} from 'react-redux';
+import {getTopRatedMovies} from '../../store/actions/movieActions';
+import {DefaultScreenStyle} from '../../styles/DefaultScreenStyle';
 
 const Home = () => {
+  const {topRatedMovies} = useSelector(state => state.movies);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getTopRatedMovies());
+  }, []);
+  console.log(topRatedMovies);
   return (
-    <View style={defaultScreenStyle.container}>
-      <Text>Home</Text>
+    <View style={DefaultScreenStyle.container}>
+      <FlatList
+        data={topRatedMovies}
+        renderItem={({item}) => (
+          <Text style={{color: 'white'}}>{item.original_title}</Text>
+        )}
+       
+      />
     </View>
   );
 };
