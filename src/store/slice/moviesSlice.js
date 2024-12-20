@@ -1,8 +1,9 @@
 import {createSlice} from '@reduxjs/toolkit';
-import {getTopRatedMovies} from '../actions/movieActions';
+import {getCategories, getTopRatedMovies} from '../actions/movieActions';
 
 const initialState = {
-  getTopRatedMovies: [],
+  topRatedMovies: [],
+  categories:[],
   pending: false,
   error: '',
 };
@@ -14,18 +15,35 @@ const moviesSlice = createSlice({
   reducers: {},
 
   extraReducers: builder => {
+
     builder
       .addCase(getTopRatedMovies.pending, state => {
         state.pending = true;
       })
       .addCase(getTopRatedMovies.fulfilled, (state, action) => {
-        state.getTopRatedMovies = action.payload;
+        state.topRatedMovies = action.payload;
         state.pending = false;
       })
       .addCase(getTopRatedMovies.rejected, (state, action) => {
         state.error = action.error;
         state.pending = false;
+      })
+
+
+      .addCase(getCategories.pending, state => {
+        state.pending = true;
+      })
+      .addCase(getCategories.fulfilled, (state, action) => {
+        state.categories = action.payload;
+        state.pending = false;
+      })
+      .addCase(getCategories.rejected, (state, action) => {
+        state.error = action.error;
+        state.pending = false;
       });
+
+
+
   },
 });
 

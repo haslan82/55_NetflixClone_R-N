@@ -1,24 +1,28 @@
 import {useEffect} from 'react';
 import {Text, StyleSheet, FlatList, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
-import {getTopRatedMovies} from '../../store/actions/movieActions';
+import {
+  getCategories,
+  getTopRatedMovies,
+} from '../../store/actions/movieActions';
 import {DefaultScreenStyle} from '../../styles/DefaultScreenStyle';
+import CategoryItem from '../../components/movies/categoryItem';
 
 const Home = () => {
-  const {topRatedMovies} = useSelector(state => state.movies);
+  const {topRatedMovies, categories} = useSelector(state => state?.movies);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getTopRatedMovies());
+    dispatch(getCategories());
   }, []);
-  console.log(topRatedMovies);
+  //console.log(topRatedMovies);
   return (
     <View style={DefaultScreenStyle.container}>
       <FlatList
-        data={topRatedMovies}
+      horizontal
+        data={categories}
         renderItem={({item}) => (
-          <Text style={{color: 'white'}}>{item.original_title}</Text>
+         <CategoryItem item={item} />
         )}
-       
       />
     </View>
   );

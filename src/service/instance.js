@@ -8,7 +8,7 @@ const Client = axios.create();
 Client.defaults.baseURL = BASE_URL;
 Client.defaults.params={
     api_key:API_KEY,
-    language:"tr-TR"
+    language:"en-EN"
 }
 Client.defaults.headers = {
   accept: 'application/json',
