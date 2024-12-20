@@ -7,5 +7,6 @@ export const HOME = 'Home'
 export const NEWHOT = 'New & Hot'
 export const SEARCH = 'Search'
 export const DOWNLOADS ="Downloads"
+export const MOVIEDETAIL = 'Movie Detail'
 
 
