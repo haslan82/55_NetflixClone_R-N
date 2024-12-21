@@ -5,6 +5,6 @@
 
 
 
-# GİF
+### GİF
 
-![](./src//assets/55_Netflix.gif)
+![](./src//assets/record/55_Netflix.gif)
