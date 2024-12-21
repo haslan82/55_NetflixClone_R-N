@@ -8,7 +8,7 @@ const ThemeColors = {
     black: '#181818',
     gray: '#656060',
     input:'#F2F2F2',
-   
+   purple:"#605BC1",
     red:'#C6090B'
   };
   

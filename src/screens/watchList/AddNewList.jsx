@@ -19,7 +19,7 @@ const AddNewList = () => {
       <Formik
         initialValues={{
           id: Date.now(),
-          title: 'Funy',
+          title: '',
         }}
         validationSchema={newListSchema}
         onSubmit={values => {
